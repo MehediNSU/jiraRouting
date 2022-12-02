@@ -1,0 +1,22 @@
+modules:
+  jira:adminPage:
+    - key: finalrouting-hello-world-admin-page
+      resource: main
+      resolver:
+        function: resolver
+      title: Test Project
+      layout: basic
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  id: ari:cloud:ecosystem::app/0dea9b4c-265a-42a0-bb14-d0733b0ffb68
+permissions:
+  content:
+    styles:
+      - unsafe-inline
+  scopes:
+    - read:jira-work

@@ -1,0 +1,25 @@
+{
+  "name": "jira-global-page-custom-ui",
+  "version": "1.0.4",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "dependencies": {
+    "@atlaskit/css-reset": "^6.3.15",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@forge/api": "^2.8.1",
+    "@forge/bridge": "^2.4.0",
+    "@forge/resolver": "^1.4.6",
+    "@mui/material": "^5.10.16",
+    "forge-apis": "^0.9.4",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-intl-next": "npm:react-intl@^5.18.1",
+    "styled-components": "^3.2.0"
+  }
+}
