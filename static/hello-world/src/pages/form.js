@@ -2,7 +2,6 @@ import { invoke } from '@forge/bridge';
 import { Multiselect } from 'multiselect-react-dropdown';
 import React, { useEffect, useState } from 'react';
 function Form () {
-  var tt ="";
 
 const [projectsData, setProjectsData] = useState([]);
 var [value, setValue] = useState("");
@@ -15,26 +14,32 @@ var [value, setValue] = useState("");
   }, []);
 
   function test(event){
-    console.log("first",event);
+    //console.log("first",event);
     setValue(event);
-    console.log("second",value);
+    //console.log("value",value);
   }
 
+  function tst() {
+    console.log("the value found after submit", value);
+  }
 
  return (
     <div style={{width:"90%", justifyContent:"center", display:"flex"}}>
-    <div className='Form'>
-        <h5 style={{color:"black"}}> Select a project</h5>
-        <Multiselect
-        isObject = {false}
-        onRemove = {(event)=>console.log(event)}
-        onSelect = {(event)=>test(event)}
-         options={projectsData}
-          />
-    <div>
-    <form onSubmit={(e) => console.log(e)}>
-        <button type='submit' className='btn btn-primary'>Click me</button>
-      </form>
+      <div className='Form'>
+          <h6 style={{color:"black"}}> Select a project</h6>
+          <Multiselect
+          isObject = {false}
+          onSelect = {(event)=>test(event)}
+          options={projectsData}
+            />
+      <div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+      <button type='button' onClick={() => tst()}>
+        Submit
+      </button>
     </div>
     </div>
     </div>
